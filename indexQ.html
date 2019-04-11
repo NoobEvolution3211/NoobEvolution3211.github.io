@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("button").click(function() {
+        $("#a1").fadeIn();
+        $("#a2").fadeIn("slow");
+        $("#a3").fadeIn(3000);
+        $("#a4").fadeIn(3500);
+        $("#a5").fadeIn(4000);
+        $("#a6").fadeIn(4500);
+        $("#a7").fadeIn(5000);
+        $("#a8").fadeIn(5500);
+        $("#a9").fadeIn(6000);
+        $("#a10").fadeIn(7500);
+        $("#a11").fadeIn(8000);
+        $("#a12").fadeIn(8500);
+      });
+    });
+    $(document).ready(function() {
+      $("#flip").click(function() {
+        $("#panel").slideDown("slow");
+      });
+    });
+  </script>
+</head>
+
+<body style="font-family:Verdana;color:#ffffff;">
+
+  <div style="background-color:#ff6347;padding:15px;text-align:center;">
+    <h1>Bon Jovi</h1>
+  </div>
+
+  <div style="overflow:auto">
+    <div class="menu">
+      <button>Maiores Sucessos</button>
+      <a id=a1 style=display:none; href="https://www.youtube.com/watch?v=9BMwcO6_hyA">Always</a>
+      <a id=a2 style=display:none; href="https://www.youtube.com/watch?v=vx2u5uUu3DE">It´s my life</a>
+      <a id=a3 style=display:none; href="https://www.youtube.com/watch?v=lDK9QqIzhwk">Livin' On A Prayer</a>
+      <a id=a4 style=display:none; href="https://www.youtube.com/watch?v=Q0Lg_ISGGW4"> Misunderstood</a>
+      <a id=a4 style=display:none; href="https://www.youtube.com/watch?v=NvR60Wg9R7Q">Bed Of Roses</a>
+      <a id=a5 style=display:none; href="https://www.youtube.com/watch?v=mh8MIp2FOhc"> I'll Be There For You</a>
+      <a id=a6 style=display:none; href="https://www.youtube.com/watch?v=KrZHPOeOxQQ">You Give Love A Bad Name</a>
+      <a id=a7 style=display:none; href="https://www.youtube.com/watch?v=tfIu7hf5nqc">Only Lonely</a>
+    </div>
+
+    <div class="main">
+
+
+      <br><img src="https://upload.wikimedia.org/wikipedia/pt/e/e9/Bon_Jovi_-_Have_a_Nice_Day.jpg" alt="Pineapple" style="width:400px;height:300px;margin-left:100px;">
+      <p>Bon Jovi é uma banda de Hard Rock dos Estados Unidos, fundada em 1984 no estado de Nova Jersey. A banda estabeleceu seu sucesso mundial ainda nos anos 80, com hits como 'Livin' On A Prayer', 'You Give Love a Bad Name' e 'Wanted Dead Or Alive. Hoje, já foram vendidas mais de 200 milhões de cópias de todos seus álbuns.
+
+A formação da banda conta com Jon Bon Jovi (vocal e guitarra), Richie Sambora (guitarra solo e backing vocal), Tico Torres (bateria) e David Bryan (teclados). A banda teve Alec John Such como baixista oficial, mas deixou o grupo em 1994. Ele nunca foi substituído e a banda permaneceu como um quarteto.
+      </p>
+
+    </div>
+
+    <div id=flip class="right">
+
+    <h2>Integrantes da banda</h2>
+ <p>Jon Bon jovi</p>
+<p>Richie sambora</p>
+<p>David bryan</p>
+<p>Tico torres</p>
+
+    </div>
+  </div>
+
+
+  <div style="background-color:#ff6347;text-align:center;padding:10px;margin-top:7px;">HAVE A NICE DAY !!!</div>
+
+</body>
+
+</html>
