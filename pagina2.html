@@ -1,0 +1,37 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+          if (localStorage.getItem("nome") == 'Guh123' && localStorage.getItem("senha") =='123') {
+                $('#conteudo1').text('PERMITIDO');
+               }else{
+                 $('#conteudo1').text('NEGADO');
+               }
+      });
+</script>
+</head>
+
+<body>
+  <h1><spam>Bem vindo(a) a área reservada! Acesso <spam id="conteudo1"></spam></h1>
+
+  <h5>Para conhecer mais sobre a banda,  acesse:</h5>
+  <a href="http://www.bonjovi.com/">
+  <style>
+  div {
+      width:100%;
+  }
+  img {
+      position: relative;
+      float: right;
+  }
+</style>
+<div>
+  <img src="https://i.ytimg.com/vi/k7nt6oOymC4/maxresdefault.jpg"width="1300" height="650" />
+
+</div>
+</a>
+</body>
+</html>
