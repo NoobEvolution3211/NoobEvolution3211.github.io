@@ -1,112 +1,168 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Bon Jovi site</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function() {
-      $("button").click(function() {
-        $("#a1").fadeIn();
-        $("#a2").fadeIn("slow");
-        $("#a3").fadeIn(3000);
-        $("#a4").fadeIn(3500);
-        $("#a5").fadeIn(4000);
-        $("#a6").fadeIn(4500);
-        $("#a7").fadeIn(5000);
-        $("#a8").fadeIn(5500);
-        $("#a9").fadeIn(6000);
-        $("#a10").fadeIn(7500);
-        $("#a11").fadeIn(8000);
-        $("#a12").fadeIn(8500);
-      });
-    });
-    $(document).ready(function() {
-      $("#flip").click(function() {
-        $("#panel").slideDown("slow");
-      });
-    });
+
+   $(document).ready(function() {
+
+
+
+     $('#form1').on('submit', function(e) {
+
+       e.preventDefault();
+
+
+
+       var api_url = 'https://api.linkpreview.net'
+
+       var key = '5ccf84adde6df2e3bf5a040cf0632c49e317f22558f16' // real
+
+       $.ajax({
+
+         url: api_url + "?key=" + key + "&q=" + $("#endereco").val(),
+
+         contentType: "application/json",
+
+         dataType: 'json',
+
+         success: function(result) {
+
+           $("#p1").text(result.title);
+
+           $("#p2").text(result.description);
+
+           $('#p3').attr('src', result.image);
+
+           $("#p4").text(result.url);
+
+         }
+
+       });
+
+
+
+     });
+
+
+
+   });
+
   </script>
+
 </head>
+<body>
 
-<body style="font-family:Verdana;color:#ffffff;">
+<div class="jumbotron text-center">
 
-  <div style="background-color:#ff6347;padding:15px;text-align:center;">
-    <h1>Bon Jovi</h1>
-  </div>
-
-  <div style="overflow:auto">
-    <div class="menu">
-      <button>Maiores Sucessos</button>
-      <a id=a1 style=display:none; href="https://www.youtube.com/watch?v=9BMwcO6_hyA">Always</a>
-      <a id=a2 style=display:none; href="https://www.youtube.com/watch?v=vx2u5uUu3DE">It´s my life</a>
-      <a id=a3 style=display:none; href="https://www.youtube.com/watch?v=lDK9QqIzhwk">Livin' On A Prayer</a>
-      <a id=a4 style=display:none; href="https://www.youtube.com/watch?v=Q0Lg_ISGGW4"> Misunderstood</a>
-      <a id=a4 style=display:none; href="https://www.youtube.com/watch?v=NvR60Wg9R7Q">Bed Of Roses</a>
-      <a id=a5 style=display:none; href="https://www.youtube.com/watch?v=mh8MIp2FOhc"> I'll Be There For You</a>
-      <a id=a6 style=display:none; href="https://www.youtube.com/watch?v=KrZHPOeOxQQ">You Give Love A Bad Name</a>
-      <a id=a7 style=display:none; href="https://www.youtube.com/watch?v=tfIu7hf5nqc">Only Lonely</a>
-    </div>
-
-    <div class="main">
+  <h1>BON JOVI</h1>
+  <style>
+  body
+  {
+      background-color: black !important;
+  }
+</style>
+<div style="background-color:#ff6347;text-align:center;padding:10px;margin-top:7px;"><h4><center>HAVE A NICE DAY !!!<center></h4></div>
+</div>
+<div class="main">
 
 
-      <br><img src="https://upload.wikimedia.org/wikipedia/pt/e/e9/Bon_Jovi_-_Have_a_Nice_Day.jpg" alt="Pineapple" style="width:400px;height:300px;margin-left:100px;">
-      <p>Bon Jovi é uma banda de Hard Rock dos Estados Unidos, fundada em 1984 no estado de Nova Jersey. A banda estabeleceu seu sucesso mundial ainda nos anos 80, com hits como 'Livin' On A Prayer', 'You Give Love a Bad Name' e 'Wanted Dead Or Alive. Hoje, já foram vendidas mais de 200 milhões de cópias de todos seus álbuns.
+    <br><img src="https://upload.wikimedia.org/wikipedia/pt/e/e9/Bon_Jovi_-_Have_a_Nice_Day.jpg" alt="Pineapple" style="width:400px;height:300px;margin-left:100px;">
+
+    <p></br>  <font color="red">Bon Jovi é uma banda de Hard Rock dos Estados Unidos, fundada em 1984 no estado de Nova Jersey. A banda estabeleceu seu sucesso mundial ainda nos anos 80, com hits como 'Livin' On A Prayer', 'You Give Love a Bad Name' e 'Wanted Dead Or Alive. Hoje, já foram vendidas mais de 200 milhões de cópias de todos seus álbuns.
 
 A formação da banda conta com Jon Bon Jovi (vocal e guitarra), Richie Sambora (guitarra solo e backing vocal), Tico Torres (bateria) e David Bryan (teclados). A banda teve Alec John Such como baixista oficial, mas deixou o grupo em 1994. Ele nunca foi substituído e a banda permaneceu como um quarteto.
-      </p>
+  </font>  </p>
 
-    </div>
+  </div>
+</div>
+<script>
 
-    <div id=flip class="right">
+ $(document).ready(function(){
 
-    <h2>Integrantes da banda</h2>
- <p>Jon Bon jovi</p>
-<p>Richie sambora</p>
-<p>David bryan</p>
-<p>Tico torres</p>
+  $('#meuFormulario').on('submit', function(e){
+          e.preventDefault();
+          var nome = $('#nome').val().length;
+          var senha = $('#senha').val().length;
+          if (nome > 0 && senha > 0) {
+              localStorage.setItem("nome", $('#nome').val());
+              localStorage.setItem("senha", $('#senha').val());
+              this.submit();
+          }else{
+            alert("Você deve preencher o usuário e senha!")
+          }
+      });
 
+  });
+
+</script>
+</head>
+<body>
+
+  <h1> <font color="red">Acesse para Ver Mais  </font></h1>
+  <form id="meuFormulario" action="pagina2.html">
+  <font color="white">Seu Login:<br></font>
+  <input type="text" name="nome" value="" id="nome">
+  <br>
+<font color="white">  Sua senha:<br></font>
+  <input type="password" name="senha" value="" id="senha">
+  <br><br>
+  <input type="submit" value="Enviar">
+  </form>
+</body>
+<body>
+<div class="container mt-3">
+  <h4><font color="white">Caso queira conhecer outro site</h4><font>
+    <form name="form1" id="form1">
+
+      <center><font color="White">URL:<center></font>
+        <input type="text" id="endereco" name="endereco">
+
+      <br>
+
+      <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  <input type="submit" value="ENVIAR"></center></button>
+
+  <!-- The Modal -->
+ <div class="modal fade" id="myModal">
+   <div class="modal-dialog">
+     <div class="modal-content">
+
+       <!-- Modal Header -->
+       <div class="modal-header">
+         <h4 class="modal-title"><font color="black">SITE</font></h4>
+         <button type="button" class="close" data-dismiss="modal">×</button>
+       </div>
+
+       <!-- Modal body -->
+       <div class="modal-body">
+        <font color="black"><p id="p1"></p></font>
+
+           <font color="black"><p id="p2"></p></font>
+
+        <font color="black"><img id="p3" src="" /></font>
+
+      <font color="black"><p id="p4"></p></font>
+       </div>
+
+       <!-- Modal footer -->
+       <div class="modal-footer">
+         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+       </div>
+
+      </div>
     </div>
   </div>
 
-
-  <div style="background-color:#ff6347;text-align:center;padding:10px;margin-top:7px;">HAVE A NICE DAY !!!</div>
-  <script>
-
-   $(document).ready(function(){
-
-    $('#meuFormulario').on('submit', function(e){
-            e.preventDefault();
-            var nome = $('#nome').val().length;
-            var senha = $('#senha').val().length;
-            if (nome > 0 && senha > 0) {
-                localStorage.setItem("nome", $('#nome').val());
-                localStorage.setItem("senha", $('#senha').val());
-                this.submit();
-            }else{
-              alert("Você deve preencher o usuário e senha!")
-            }
-        });
-
-    });
-
-  </script>
-  </head>
-  <body>
-
-    <h1>Acesse Para Ver Mais</h1>
-    <form id="meuFormulario" action="pagina2.html">
-    Seu Login:<br>
-    <input type="text" name="nome" value="" id="nome">
-    <br>
-    Sua senha:<br>
-    <input type="password" name="senha" value="" id="senha">
-    <br><br>
-    <br><br>
-    <input type="submit" value="Enviar">
-    </form>
+</div>
 </body>
+
 
 </html>
